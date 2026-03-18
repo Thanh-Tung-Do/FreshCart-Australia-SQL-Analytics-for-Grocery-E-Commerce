@@ -151,11 +151,28 @@ print(con.execute('SELECT * FROM orders LIMIT 5').fetchdf())
 Copy any query from `analysis.sql` and execute it against the DuckDB database.
 
 ### Rebuild from CSVs
+
+The database is built using `schema.sql`, which defines all tables with explicit primary keys, foreign keys, and constraints. To rebuild from scratch:
+
+```bash
+python3 setup_database.py
+```
+
+Or manually:
 ```python
 import duckdb
 con = duckdb.connect('grocery_analytics.duckdb')
-for table in ['customers', 'products', 'stores', 'orders', 'order_items', 'promotions']:
-    con.execute(f"CREATE OR REPLACE TABLE {table} AS SELECT * FROM read_csv_auto('{table}.csv')")
+
+# Create tables with schema
+with open('schema.sql') as f:
+    for stmt in f.read().split(';'):
+        stmt = stmt.strip()
+        if stmt and not stmt.startswith('--'):
+            con.execute(stmt)
+
+# Load data in dependency order
+for table in ['customers', 'products', 'stores', 'promotions', 'orders', 'order_items']:
+    con.execute(f"INSERT INTO {table} SELECT * FROM read_csv_auto('{table}.csv')")
 ```
 
 ## Key Findings (summary)
@@ -173,6 +190,7 @@ for table in ['customers', 'products', 'stores', 'orders', 'order_items', 'promo
 freshcart-sql-project/
 ├── freshcart_sql_analysis.ipynb   # All 16 queries with outputs (view on GitHub)
 ├── analysis.sql                    # Full SQL source with detailed comments
+├── schema.sql                      # Table definitions with PKs, FKs, constraints
 ├── grocery_analytics.duckdb        # Pre-built DuckDB database
 ├── customers.csv                   # 5,000 customer profiles
 ├── products.csv                    # 96 grocery SKUs
@@ -180,14 +198,14 @@ freshcart-sql-project/
 ├── orders.csv                      # 24,074 transactions
 ├── order_items.csv                 # 63,262 line items
 ├── promotions.csv                  # 7 promotional events
-├── setup_database.py               # Rebuild database from CSVs
+├── setup_database.py               # Rebuild database from schema + CSVs
 └── README.md
 ```
 
 ## Tools
 
 - **SQL Engine:** DuckDB 1.5.0
-- **Data:** Synthetic dataset
+- **Data Generation:** Python (synthetic dataset)
 - **Analysis Notebook:** Jupyter Notebook with pre-executed outputs
 - **Visualisation:** (to be added separately)
 
