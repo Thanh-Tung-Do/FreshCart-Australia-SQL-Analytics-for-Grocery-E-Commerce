@@ -622,3 +622,6 @@ SELECT
     RANK() OVER (PARTITION BY category ORDER BY revenue DESC) AS rank_in_category
 FROM brand_stats
 ORDER BY category, rank_in_category;
+
+-- End of SQL analytics code for FreshCart Australia dataset.
+-- All these queries can be run in the included interactive Python Notebook
