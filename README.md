@@ -24,7 +24,7 @@ All analysis is done in **SQL (DuckDB)**, demonstrating proficiency with CTEs, w
                       │
 promotions ──── orders ──── order_items ──── products
                       │
-              stores ──┘
+             stores ──┘
 ```
 
 ## SQL Techniques Demonstrated
