@@ -6,6 +6,10 @@ This project analyses 3 years of transactional data (2022-2024) from a fictional
 
 All analysis is done in **SQL (DuckDB)**, demonstrating proficiency with CTEs, window functions, cohort analysis, RFM segmentation, promotional ROI, market basket analysis, and more.
 
+### Why DuckDB?
+
+I find DuckDB a very interesting library. It is an in-process analytical database that runs entirely within Python with zero external dependencies, no server setup, and no configuration. With the recent release of [DuckDB 1.5.0 "Variegata"](https://duckdb.org/2026/03/09/announcing-duckdb-150) (March 2026), which introduced the VARIANT type, built-in GEOMETRY support, and significant performance improvements, I wanted to try it out in a Python environment and put it through its paces on a realistic analytical workload.
+
 ## Dataset
 
 | Table | Rows | Description |
@@ -19,12 +23,65 @@ All analysis is done in **SQL (DuckDB)**, demonstrating proficiency with CTEs, w
 
 **Schema (star schema pattern):**
 
-```
-          customers ──┐
-                      │
-promotions ──── orders ──── order_items ──── products
-                      │
-             stores ──┘
+```mermaid
+erDiagram
+    customers {
+        varchar customer_id PK
+        varchar first_name
+        varchar last_name
+        varchar state
+        varchar city
+        date signup_date
+        varchar customer_segment
+    }
+    products {
+        varchar product_id PK
+        varchar product_name
+        varchar category
+        varchar subcategory
+        varchar brand
+        decimal unit_price
+        decimal unit_cost
+        boolean is_active
+    }
+    stores {
+        varchar store_id PK
+        varchar store_name
+        varchar state
+        varchar city
+        date opened_date
+        int store_size_sqm
+    }
+    promotions {
+        varchar promo_id PK
+        varchar promo_name
+        date start_date
+        date end_date
+        decimal discount_pct
+    }
+    orders {
+        varchar order_id PK
+        varchar customer_id FK
+        date order_date
+        varchar channel
+        varchar store_id FK
+        varchar promo_id FK
+        varchar status
+    }
+    order_items {
+        varchar order_id FK
+        int line_item
+        varchar product_id FK
+        int quantity
+        decimal unit_price
+        decimal discount_pct
+        decimal final_unit_price
+    }
+    customers ||--o{ orders : places
+    stores ||--o{ orders : fulfils
+    promotions ||--o{ orders : applies_to
+    orders ||--|{ order_items : contains
+    products ||--o{ order_items : listed_in
 ```
 
 ## SQL Techniques Demonstrated
@@ -63,13 +120,23 @@ promotions ──── orders ──── order_items ──── products
 | 15 | Purchase Gap Analysis | How long do customers typically wait between orders? |
 | 16 | Brand Share | Which brands dominate within each category? |
 
+## Interactive Notebook
+
+The file **`freshcart_sql_analysis.ipynb`** contains all 16 SQL queries with pre-populated outputs. This means you can review every query and its results directly on GitHub without needing to install DuckDB or run any code. Each query is accompanied by a markdown explanation covering the business question and the SQL techniques used.
+
+If you want to run the queries yourself or modify them, you only need Python and the `duckdb` package (`pip install duckdb`).
+
 ## How to Run
 
-### Requirements
-- Python 3.8+
+### Quick Start (no installation needed)
+
+Open **`freshcart_sql_analysis.ipynb`** on GitHub to view all 16 queries and their results immediately.
+
+### Requirements (to run locally)
+- Python 3.10+
 - DuckDB (`pip install duckdb`)
 
-### Quick Start
+### Run locally
 
 ```bash
 # Load the database (already built)
@@ -100,10 +167,28 @@ for table in ['customers', 'products', 'stores', 'orders', 'order_items', 'promo
 - **Online channel** share has been growing steadily quarter over quarter
 - Most customers repurchase within **31 to 60 days**, suggesting a monthly shopping cycle
 
+## Project Structure
+
+```
+freshcart-sql-project/
+├── freshcart_sql_analysis.ipynb   # All 16 queries with outputs (view on GitHub)
+├── analysis.sql                    # Full SQL source with detailed comments
+├── grocery_analytics.duckdb        # Pre-built DuckDB database
+├── customers.csv                   # 5,000 customer profiles
+├── products.csv                    # 96 grocery SKUs
+├── stores.csv                      # 12 retail locations
+├── orders.csv                      # 24,074 transactions
+├── order_items.csv                 # 63,262 line items
+├── promotions.csv                  # 7 promotional events
+├── setup_database.py               # Rebuild database from CSVs
+└── README.md
+```
+
 ## Tools
 
-- **SQL Engine:** DuckDB
+- **SQL Engine:** DuckDB 1.5.0
 - **Data Generation:** Python (synthetic, reproducible via `seed=42`)
+- **Analysis Notebook:** Jupyter Notebook with pre-executed outputs
 - **Visualisation:** (to be added separately)
 
 ## Author
