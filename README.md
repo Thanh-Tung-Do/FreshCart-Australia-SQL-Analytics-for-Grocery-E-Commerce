@@ -172,7 +172,7 @@ with open('schema.sql') as f:
 
 # Load data in dependency order
 for table in ['customers', 'products', 'stores', 'promotions', 'orders', 'order_items']:
-    con.execute(f"INSERT INTO {table} SELECT * FROM read_csv_auto('{table}.csv')")
+    con.execute(f"INSERT INTO {table} SELECT * FROM read_csv_auto('data/{table}.csv')")
 ```
 
 ## Key Findings (summary)
@@ -192,13 +192,14 @@ freshcart-sql-project/
 ├── analysis.sql                    # Full SQL source with detailed comments
 ├── schema.sql                      # Table definitions with PKs, FKs, constraints
 ├── grocery_analytics.duckdb        # Pre-built DuckDB database
-├── customers.csv                   # 5,000 customer profiles
-├── products.csv                    # 96 grocery SKUs
-├── stores.csv                      # 12 retail locations
-├── orders.csv                      # 24,074 transactions
-├── order_items.csv                 # 63,262 line items
-├── promotions.csv                  # 7 promotional events
 ├── setup_database.py               # Rebuild database from schema + CSVs
+├── data/
+│   ├── customers.csv               # 5,000 customer profiles
+│   ├── products.csv                # 96 grocery SKUs
+│   ├── stores.csv                  # 12 retail locations
+│   ├── orders.csv                  # 24,074 transactions
+│   ├── order_items.csv             # 63,262 line items
+│   └── promotions.csv              # 7 promotional events
 └── README.md
 ```
 
