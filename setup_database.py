@@ -12,12 +12,14 @@ SCHEMA_FILE = "schema.sql"
 DATA_DIR = "data"
 
 # Check required files exist
-required = [SCHEMA_FILE] + [f"{t}.csv" for t in
-    ["customers", "products", "stores", "orders", "order_items", "promotions"]]
+if not os.path.exists(SCHEMA_FILE):
+    print(f"ERROR: {SCHEMA_FILE} not found. Place it in the project root directory.")
+    exit(1)
 
-for f in required:
+for t in ["customers", "products", "stores", "orders", "order_items", "promotions"]:
+    f = f"{t}.csv"
     if not os.path.exists(os.path.join(DATA_DIR, f)):
-        print(f"ERROR: {f} not found. Place all files in the same directory.")
+        print(f"ERROR: {f} not found. Place all CSV files in the '{DATA_DIR}/' directory.")
         exit(1)
 
 # Remove existing database if rebuilding
