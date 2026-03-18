@@ -1,0 +1,13 @@
+store_id,store_name,state,city,opened_date,store_size_sqm
+S001,CBD Flagship,WA,Bunbury,2020-04-15,200
+S002,Westfield Bondi,VIC,Geelong,2020-01-14,350
+S003,Chadstone,VIC,Ballarat,2019-01-30,200
+S004,Indooroopilly,SA,Adelaide,2020-09-26,500
+S005,Karrinyup,NSW,Wollongong,2022-02-06,500
+S006,Rundle Mall,NSW,Sydney,2019-11-19,500
+S007,Eastland,NSW,Wollongong,2019-01-15,1200
+S008,Macquarie Centre,NSW,Central Coast,2020-12-19,200
+S009,Highpoint,NSW,Central Coast,2019-05-14,500
+S010,Pacific Fair,VIC,Ballarat,2019-01-17,1200
+S011,Charlestown,WA,Fremantle,2019-07-31,500
+S012,Marion,VIC,Geelong,2022-01-09,1200

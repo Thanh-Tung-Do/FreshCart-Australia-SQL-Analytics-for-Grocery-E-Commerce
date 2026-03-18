@@ -1,0 +1,97 @@
+product_id,product_name,category,subcategory,brand,unit_price,unit_cost,is_active
+P0001,Lavazza Ground Coffee,Coffee,Ground Coffee,Lavazza,33.36,24.46,1
+P0002,Nescafe Ground Coffee,Coffee,Ground Coffee,Nescafe,16.46,10.31,1
+P0003,Moccona Ground Coffee,Coffee,Ground Coffee,Moccona,17.11,10.89,1
+P0004,Lavazza Instant Coffee,Coffee,Instant Coffee,Lavazza,36.79,26.75,1
+P0005,Moccona Instant Coffee,Coffee,Instant Coffee,Moccona,24.7,18.52,1
+P0006,Vittoria Coffee Pods,Coffee,Coffee Pods,Vittoria,30.89,18.66,1
+P0007,Vittoria Cold Brew,Coffee,Cold Brew,Vittoria,8.22,4.89,1
+P0008,Lavazza Cold Brew,Coffee,Cold Brew,Lavazza,17.03,11.09,1
+P0009,Nescafe Cold Brew,Coffee,Cold Brew,Nescafe,35.56,24.47,1
+P0010,Campos Cold Brew,Coffee,Cold Brew,Campos,26.61,17.55,1
+P0011,T2 Black Tea,Tea,Black Tea,T2,11.81,6.84,1
+P0012,Lipton Black Tea,Tea,Black Tea,Lipton,22.24,12.55,1
+P0013,Twinings Green Tea,Tea,Green Tea,Twinings,8.65,4.69,1
+P0014,Pukka Green Tea,Tea,Green Tea,Pukka,8.3,5.52,1
+P0015,Twinings Herbal Tea,Tea,Herbal Tea,Twinings,7.5,4.88,1
+P0016,Twinings Specialty Tea,Tea,Specialty Tea,Twinings,18.67,11.72,1
+P0017,Dilmah Specialty Tea,Tea,Specialty Tea,Dilmah,9.92,5.49,1
+P0018,Lipton Specialty Tea,Tea,Specialty Tea,Lipton,18.07,10.03,1
+P0019,Smith's Chips,Snacks,Chips,Smith's,5.85,4.02,1
+P0020,Cadbury Chips,Snacks,Chips,Cadbury,8.75,6.57,1
+P0021,Carman's Chips,Snacks,Chips,Carman's,10.11,7.47,1
+P0022,Smith's Nuts & Seeds,Snacks,Nuts & Seeds,Smith's,3.55,2.82,1
+P0023,Cadbury Nuts & Seeds,Snacks,Nuts & Seeds,Cadbury,12.37,7.5,1
+P0024,Arnott's Nuts & Seeds,Snacks,Nuts & Seeds,Arnott's,8.2,6.12,1
+P0025,Carman's Nuts & Seeds,Snacks,Nuts & Seeds,Carman's,12.53,8.34,1
+P0026,Cadbury Crackers,Snacks,Crackers,Cadbury,9.35,7.33,1
+P0027,Arnott's Crackers,Snacks,Crackers,Arnott's,12.04,8.13,1
+P0028,Cadbury Protein Bars,Snacks,Protein Bars,Cadbury,4.7,3.39,1
+P0029,Arnott's Protein Bars,Snacks,Protein Bars,Arnott's,10.2,7.23,1
+P0030,Smith's Dried Fruit,Snacks,Dried Fruit,Smith's,11.21,8.71,1
+P0031,Red Rock Deli Dried Fruit,Snacks,Dried Fruit,Red Rock Deli,7.98,6.16,1
+P0032,Cadbury Dried Fruit,Snacks,Dried Fruit,Cadbury,7.81,6.04,1
+P0033,Arnott's Dried Fruit,Snacks,Dried Fruit,Arnott's,14.08,10.02,1
+P0034,Nudie Soft Drinks,Beverages,Soft Drinks,Nudie,10.52,7.94,1
+P0035,Mount Franklin Soft Drinks,Beverages,Soft Drinks,Mount Franklin,3.66,3.01,1
+P0036,Coca-Cola Energy Drinks,Beverages,Energy Drinks,Coca-Cola,9.61,7.61,1
+P0037,Coca-Cola Juices,Beverages,Juices,Coca-Cola,4.05,3.27,1
+P0038,Schweppes Juices,Beverages,Juices,Schweppes,2.72,2.06,1
+P0039,Remedy Juices,Beverages,Juices,Remedy,3.74,2.68,1
+P0040,Coca-Cola Sparkling Water,Beverages,Sparkling Water,Coca-Cola,11.9,8.36,1
+P0041,Schweppes Sparkling Water,Beverages,Sparkling Water,Schweppes,4.62,3.9,1
+P0042,Nudie Sparkling Water,Beverages,Sparkling Water,Nudie,7.65,5.59,1
+P0043,Mount Franklin Sparkling Water,Beverages,Sparkling Water,Mount Franklin,4.16,3.08,1
+P0044,Remedy Kombucha,Beverages,Kombucha,Remedy,6.86,5.0,1
+P0045,Nudie Kombucha,Beverages,Kombucha,Nudie,4.27,2.91,1
+P0046,Mount Franklin Kombucha,Beverages,Kombucha,Mount Franklin,3.81,2.51,1
+P0047,Uncle Tobys Cereal,Breakfast,Cereal,Uncle Tobys,17.27,13.08,1
+P0048,Sanitarium Cereal,Breakfast,Cereal,Sanitarium,4.81,3.43,1
+P0049,Brookfarm Cereal,Breakfast,Cereal,Brookfarm,4.7,2.97,1
+P0050,White Wings Cereal,Breakfast,Cereal,White Wings,5.15,3.55,1
+P0051,Sanitarium Muesli,Breakfast,Muesli,Sanitarium,11.26,8.74,1
+P0052,Carman's Muesli,Breakfast,Muesli,Carman's,12.17,7.09,1
+P0053,White Wings Muesli,Breakfast,Muesli,White Wings,8.69,6.0,1
+P0054,Uncle Tobys Oats,Breakfast,Oats,Uncle Tobys,14.18,9.2,1
+P0055,Sanitarium Oats,Breakfast,Oats,Sanitarium,7.99,5.25,1
+P0056,White Wings Oats,Breakfast,Oats,White Wings,5.49,4.15,1
+P0057,Uncle Tobys Pancake Mix,Breakfast,Pancake Mix,Uncle Tobys,15.07,8.78,1
+P0058,Sanitarium Pancake Mix,Breakfast,Pancake Mix,Sanitarium,11.74,7.9,1
+P0059,Carman's Pancake Mix,Breakfast,Pancake Mix,Carman's,17.55,12.17,1
+P0060,Brookfarm Pancake Mix,Breakfast,Pancake Mix,Brookfarm,13.59,8.0,1
+P0061,White Wings Pancake Mix,Breakfast,Pancake Mix,White Wings,7.41,4.31,1
+P0062,Sanitarium Spreads,Breakfast,Spreads,Sanitarium,17.73,12.53,1
+P0063,Carman's Spreads,Breakfast,Spreads,Carman's,14.43,9.08,1
+P0064,Brookfarm Spreads,Breakfast,Spreads,Brookfarm,12.52,9.22,1
+P0065,White Wings Spreads,Breakfast,Spreads,White Wings,5.24,3.21,1
+P0066,Bega Milk,Dairy,Milk,Bega,10.82,8.69,1
+P0067,Chobani Milk,Dairy,Milk,Chobani,13.43,10.68,1
+P0068,Jalna Milk,Dairy,Milk,Jalna,8.5,7.11,1
+P0069,Dairy Farmers Yoghurt,Dairy,Yoghurt,Dairy Farmers,4.89,4.12,1
+P0070,Chobani Yoghurt,Dairy,Yoghurt,Chobani,7.64,6.74,1
+P0071,Jalna Yoghurt,Dairy,Yoghurt,Jalna,8.8,7.57,1
+P0072,Bega Cheese,Dairy,Cheese,Bega,6.42,5.2,1
+P0073,Dairy Farmers Cheese,Dairy,Cheese,Dairy Farmers,4.8,4.06,1
+P0074,Chobani Cheese,Dairy,Cheese,Chobani,6.66,5.77,1
+P0075,Oatly Cheese,Dairy,Cheese,Oatly,12.02,10.4,1
+P0076,Jalna Cheese,Dairy,Cheese,Jalna,11.34,10.0,1
+P0077,Dairy Farmers Plant-Based Milk,Dairy,Plant-Based Milk,Dairy Farmers,9.64,8.45,1
+P0078,Chobani Plant-Based Milk,Dairy,Plant-Based Milk,Chobani,12.81,11.33,1
+P0079,Jalna Plant-Based Milk,Dairy,Plant-Based Milk,Jalna,11.14,9.49,1
+P0080,SunRice Pasta,Pantry,Pasta,SunRice,19.67,12.4,1
+P0081,Leggos Pasta,Pantry,Pasta,Leggos,9.58,7.51,0
+P0082,Cobram Estate Pasta,Pantry,Pasta,Cobram Estate,19.85,13.47,1
+P0083,San Remo Rice,Pantry,Rice,San Remo,9.11,6.43,1
+P0084,Leggos Rice,Pantry,Rice,Leggos,15.02,10.65,1
+P0085,San Remo Sauces,Pantry,Sauces,San Remo,12.86,10.52,1
+P0086,SunRice Sauces,Pantry,Sauces,SunRice,9.2,6.33,1
+P0087,Leggos Sauces,Pantry,Sauces,Leggos,2.83,1.99,1
+P0088,Masterfoods Sauces,Pantry,Sauces,Masterfoods,12.43,9.04,1
+P0089,San Remo Cooking Oil,Pantry,Cooking Oil,San Remo,2.58,1.61,1
+P0090,SunRice Cooking Oil,Pantry,Cooking Oil,SunRice,14.65,10.66,1
+P0091,Leggos Cooking Oil,Pantry,Cooking Oil,Leggos,7.92,5.0,0
+P0092,Cobram Estate Cooking Oil,Pantry,Cooking Oil,Cobram Estate,11.15,8.99,1
+P0093,Masterfoods Cooking Oil,Pantry,Cooking Oil,Masterfoods,10.47,6.63,1
+P0094,San Remo Spices,Pantry,Spices,San Remo,4.45,3.22,1
+P0095,Cobram Estate Spices,Pantry,Spices,Cobram Estate,7.5,5.17,1
+P0096,Masterfoods Spices,Pantry,Spices,Masterfoods,19.01,15.23,1
