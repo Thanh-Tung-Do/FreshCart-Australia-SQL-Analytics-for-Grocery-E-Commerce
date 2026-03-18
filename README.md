@@ -187,7 +187,7 @@ freshcart-sql-project/
 ## Tools
 
 - **SQL Engine:** DuckDB 1.5.0
-- **Data Generation:** Python (synthetic, reproducible via `seed=42`)
+- **Data:** Synthetic dataset
 - **Analysis Notebook:** Jupyter Notebook with pre-executed outputs
 - **Visualisation:** (to be added separately)
 
