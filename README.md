@@ -188,7 +188,7 @@ for table in ['customers', 'products', 'stores', 'promotions', 'orders', 'order_
 
 ```
 freshcart-sql-project/
-├── freshcart_sql_analysis.ipynb   # All 16 queries with outputs (view on GitHub)
+├── freshcart_sql_analysis.ipynb    # All 16 queries with outputs (view on GitHub)
 ├── analysis.sql                    # Full SQL source with detailed comments
 ├── schema.sql                      # Table definitions with PKs, FKs, constraints
 ├── grocery_analytics.duckdb        # Pre-built DuckDB database
